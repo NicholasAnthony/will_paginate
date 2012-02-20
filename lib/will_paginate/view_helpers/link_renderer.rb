@@ -42,9 +42,9 @@ module WillPaginate
     
       def page_number(page)
         unless page == current_page
-          content_tag(:li, link(page, page, :rel => rel_value(page)))
+          tag(:li, link(page, page, :rel => rel_value(page)))
         else
-          content_tag(:li, link(page, page), :class => 'active')
+          tag(:li, link(page, page), :class => 'active')
         end
       end
       
@@ -65,9 +65,9 @@ module WillPaginate
       
       def previous_or_next_page(page, text, classname)
         if page
-          content_tag(:li, link(text, page), :class => classname )
+          tag(:li, link(text, page), :class => classname )
         else
-          content_tag(:li, link(text, page), :class => classname + ' disabled' )
+          tag(:li, link(text, page), :class => classname + ' disabled' )
           # link(text, page, :class => classname + ' disabled')
         end
       end
