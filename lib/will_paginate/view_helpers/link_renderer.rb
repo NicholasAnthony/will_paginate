@@ -67,7 +67,7 @@ module WillPaginate
         if page
           link(text, page, :class => classname)
         else
-          tag(:span, text, :class => classname + ' disabled')
+          link(text, page, :class => classname + ' disabled')
         end
       end
       
