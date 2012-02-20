@@ -41,12 +41,11 @@ module WillPaginate
     protected
     
       def page_number(page)
-        link(page, page, :rel => rel_value(page))
-        # unless page == current_page
-        #   link(page, page, :rel => rel_value(page))
-        # else
-        #   tag(:em, page, :class => 'current')
-        # end
+        unless page == current_page
+          link(page, page, :rel => rel_value(page))
+        else
+          link(page, :class => 'active')
+        end
       end
       
       def gap
