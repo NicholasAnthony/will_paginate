@@ -72,7 +72,7 @@ module WillPaginate
       end
       
       def html_container(html)
-        tag(:div, html, container_attributes)
+        tag(:ul, html, container_attributes)
       end
       
       # Returns URL params for +page_link_or_span+, taking the current GET params
